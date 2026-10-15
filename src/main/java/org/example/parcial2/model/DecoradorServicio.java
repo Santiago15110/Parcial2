@@ -1,6 +1,6 @@
 package org.example.parcial2.model;
 
-public abstract class DecoradorServicio {
+public abstract class DecoradorServicio implements ElementoServicio {
 
     protected final ElementoServicio elemento;
 
@@ -11,7 +11,7 @@ public abstract class DecoradorServicio {
 
     @Override
     public String getNombre(){
-        return elemento.getNombre;
+        return elemento.getNombre();
     }
 
 
