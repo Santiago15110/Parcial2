@@ -12,5 +12,11 @@ public class AtencionPrioritaria extends DecoradorServicio {
         return  elemento.getDescripcion() + " + Atencion prioritaria";
     }
 
+    @Override
+    public double calcularCosto(){
+        return elemento.calcularCosto() + 35000;
+    }
+
+
 
 }

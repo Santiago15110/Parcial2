@@ -31,13 +31,22 @@ public abstract class ServicioTecnologico implements ElementoServicio{
         return costoBase;
     }
 
-    public String getDescripcion() {
+
+    @Override
+    public String getNombre(){
+        return nombre;
+    }
+
+    @Override
+    public String getDescripcion(){
         return descripcion;
     }
 
-    public String getNombre() {
-        return nombre;
+    @Override
+    public double calcularCosto(){
+        return costoBase;
     }
+
 
 
 
