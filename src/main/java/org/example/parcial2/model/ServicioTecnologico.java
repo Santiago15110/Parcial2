@@ -1,6 +1,6 @@
 package org.example.parcial2.model;
 
-public abstract class ServicioTecnologico {
+public abstract class ServicioTecnologico implements ElementoServicio{
 
     private String codigo;
     private String nombre;
@@ -23,6 +23,21 @@ public abstract class ServicioTecnologico {
         this.costoBase=costoBase;
     }
 
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public double getCostoBase() {
+        return costoBase;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
 
 
 

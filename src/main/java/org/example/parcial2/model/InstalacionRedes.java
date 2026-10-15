@@ -1,4 +1,18 @@
 package org.example.parcial2.model;
 
-public class InstalacionRedes {
+public class InstalacionRedes extends ServicioTecnologico{
+
+
+    /**
+     * Metodo constructor de la clase
+     * @param codigo
+     * @param nombre
+     * @param descripcion
+     * @param costoBase
+     */
+    public InstalacionRedes(String codigo, String nombre, String descripcion, double costoBase) {
+        super(codigo, nombre, descripcion, costoBase);
+    }
+
+
 }
