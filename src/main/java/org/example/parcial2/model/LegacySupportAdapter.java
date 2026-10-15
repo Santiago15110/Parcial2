@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class LegacySupportAdapter implements ProveedorTecnico{
 
-    private final LegacySupport legacySupport;
-    private final Map<String, Integer> codigosEspecialidad;
+    private LegacySupport legacySupport;
+    private Map<String, Integer> codigosEspecialidad;
 
     /**
      * Método para crear el adaptador de la plataforma LegacySupport
@@ -51,4 +51,4 @@ public class LegacySupportAdapter implements ProveedorTecnico{
     }
 }
 
-}
+
