@@ -1,9 +1,9 @@
 package org.example.parcial2.model;
 
 public class Tecnico {
-    private final String idTecnico;
-    private final boolean disponible;
-    private final double costoDesplazamiento;
+    private String idTecnico;
+    private boolean disponible;
+    private double costoDesplazamiento;
 
     /**
      * Método constructor
@@ -31,4 +31,4 @@ public class Tecnico {
                 + " | desplazamiento: " + costoDesplazamiento;
     }
 }
-}
+
