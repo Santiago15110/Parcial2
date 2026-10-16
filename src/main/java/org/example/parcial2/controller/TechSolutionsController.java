@@ -46,4 +46,12 @@ public class TechSolutionsController {
         return personalizado;
     }
 
+    public void guardarServicioPersonalizado(ElementoServicio personalizado) {
+        techSolutions.getCatalogo().agregarPersonalizado(personalizado);
+    }
+
+    public ArrayList<ElementoServicio> consultarServiciosPersonalizados() {
+        return techSolutions.getCatalogo().consultarPersonalizados();
+    }
+
 }

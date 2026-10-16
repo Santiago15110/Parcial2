@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SolicitudServicio {
+public class  SolicitudServicio {
     private String codigo;
     private LocalDate fechaCreacion;
     private Cliente cliente;

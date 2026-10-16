@@ -1,19 +1,27 @@
 package org.example.parcial2;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import org.example.parcial2.controller.TechSolutionsController;
+import org.example.parcial2.util.SceneManager;
 
 public class HelloApplication extends Application {
+
+    private final TechSolutionsController controller = new TechSolutionsController();  // única instancia
+    private Stage stage;
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage) {
+        this.stage = stage;
+        stage.setTitle("TechSolutions");
+        SceneManager.cambiarEscena("view/menu.fxml", this);
+    }
+
+    public TechSolutionsController getController() { return controller; }
+
+    public Stage getStage() { return stage; }
+
+    public static void main(String[] args) {
+        launch();
     }
 }
