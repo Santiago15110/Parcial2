@@ -31,5 +31,8 @@ public class GestorClientes {
         return null;
     }
 
+    public ArrayList<Cliente> consultarClientes() {
+        return new ArrayList<>(clientes);
+    }
 
 }
