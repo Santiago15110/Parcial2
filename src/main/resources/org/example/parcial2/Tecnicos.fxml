@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="panelTecnicos" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.controller.TecnicosController">
+   <children>
+      <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: #1E3A5F;">
+         <children>
+            <Label layoutX="16.0" layoutY="10.0" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="TechSolutions" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="0.0" layoutY="38.0" prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: #DDE3EA;">
+         <children>
+            <Button fx:id="btnVolverInicio" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#onVolverClick" style="-fx-background-color: #44505E; -fx-text-fill: white; -fx-background-radius: 4;" text="← Inicio" />
+            <Label layoutX="110.0" layoutY="9.0" style="-fx-text-fill: #1E3A5F; -fx-font-size: 15px; -fx-font-weight: bold;" text="Técnicos y costo" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="88.0" prefHeight="225.0" prefWidth="470.0" style="-fx-border-color: #CFD6DF; -fx-border-radius: 6; -fx-background-radius: 6; -fx-background-color: white;">
+         <children>
+         <Label layoutX="12.0" layoutY="8.0" style="-fx-text-fill: #1E3A5F; -fx-font-weight: bold;" text="Consultar técnico (LegacySupport)" />
+         <Label layoutX="12.0" layoutY="34.0" style="-fx-text-fill: #5B6775;" text="Especialidad" />
+         <ComboBox fx:id="cmbEspecialidadConsulta" layoutX="12.0" layoutY="54.0" prefWidth="250.0" promptText="Selecciona una especialidad" />
+         <Button fx:id="btnConsultarTecnico" layoutX="12.0" layoutY="92.0" mnemonicParsing="false" onAction="#onConsultarTecnicoClick" style="-fx-background-color: #1E6FD9; -fx-text-fill: white; -fx-background-radius: 4;" text="Consultar disponibilidad" />
+         <Label layoutX="12.0" layoutY="138.0" style="-fx-text-fill: #5B6775;" text="Técnico" />
+         <Label fx:id="lblTecnicoId" layoutX="140.0" layoutY="138.0" text="-" />
+         <Label layoutX="12.0" layoutY="164.0" style="-fx-text-fill: #5B6775;" text="Disponibilidad" />
+         <Label fx:id="lblTecnicoDisponibilidad" layoutX="140.0" layoutY="164.0" text="-" />
+         <Label layoutX="12.0" layoutY="190.0" style="-fx-text-fill: #5B6775;" text="Desplazamiento" />
+         <Label fx:id="lblTecnicoDesplazamiento" layoutX="140.0" layoutY="190.0" text="-" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblMensajeTecnico" layoutX="14.0" layoutY="322.0" prefWidth="470.0" text="" visible="false" wrapText="true" />
+      <AnchorPane layoutX="500.0" layoutY="88.0" prefHeight="340.0" prefWidth="486.0" style="-fx-border-color: #CFD6DF; -fx-border-radius: 6; -fx-background-radius: 6; -fx-background-color: white;">
+         <children>
+         <Label layoutX="12.0" layoutY="8.0" style="-fx-text-fill: #1E3A5F; -fx-font-weight: bold;" text="Costo de la solicitud" />
+         <Label layoutX="12.0" layoutY="34.0" style="-fx-text-fill: #5B6775;" text="Solicitud" />
+         <ComboBox fx:id="cmbSolicitud" layoutX="12.0" layoutY="54.0" onAction="#onSolicitudSeleccionada" prefWidth="440.0" promptText="Selecciona una solicitud" />
+         <Label layoutX="12.0" layoutY="130.0" text="Servicios y paquetes" />
+         <Label fx:id="lblCostoElementos" alignment="CENTER_RIGHT" layoutX="300.0" layoutY="130.0" prefWidth="152.0" text="0" />
+         <Label layoutX="12.0" layoutY="160.0" text="Desplazamiento (una sola vez)" />
+         <Label fx:id="lblCostoDesplazamiento" alignment="CENTER_RIGHT" layoutX="300.0" layoutY="160.0" prefWidth="152.0" text="0" />
+         <Label layoutX="12.0" layoutY="194.0" style="-fx-font-weight: bold;" text="Total" />
+         <Label fx:id="lblCostoTotal" alignment="CENTER_RIGHT" layoutX="300.0" layoutY="192.0" prefWidth="152.0" style="-fx-text-fill: #0F766E; -fx-font-size: 15px; -fx-font-weight: bold;" text="0" />
+         <Label layoutX="12.0" layoutY="230.0" text="Estado" />
+         <Label fx:id="lblEstado" alignment="CENTER_RIGHT" layoutX="300.0" layoutY="230.0" prefWidth="152.0" text="-" />
+         <Label layoutX="12.0" layoutY="262.0" style="-fx-text-fill: #5B6775;" text="Las características complementarias ya están incluidas en cada servicio." />
+         <Button fx:id="btnConfirmar" layoutX="12.0" layoutY="296.0" mnemonicParsing="false" onAction="#onConfirmarClick" style="-fx-background-color: #0F766E; -fx-text-fill: white; -fx-background-radius: 4;" text="Confirmar solicitud" />
+            <CheckBox layoutX="14.0" layoutY="96.0" mnemonicParsing="false" text="Requiere atención presencial" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblMensaje" layoutX="500.0" layoutY="438.0" prefWidth="486.0" text="" visible="false" wrapText="true" />
+   </children>
 </AnchorPane>
