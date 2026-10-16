@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) {
         this.stage = stage;
         stage.setTitle("TechSolutions");
-        SceneManager.cambiarEscena("view/menu.fxml", this);
+        SceneManager.cambiarEscena("Inicio.fxml", this);
     }
 
     public TechSolutionsController getController() { return controller; }

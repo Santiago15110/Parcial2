@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class TechSolutionsController {
 
     private final TechSolutions techSolutions = new TechSolutions();
-
+    private final ArrayList<PaqueteTecnologico> paquetes = new ArrayList<>();
+    private final ProveedorTecnico proveedorTecnico = new LegacySupportAdapter(new LegacySupport());;
 
     public Cliente registrarCliente(String documento, String nombreCompleto, String correo) {
         return techSolutions.getClientes().registrarCliente(documento, nombreCompleto, correo);
@@ -21,7 +22,6 @@ public class TechSolutionsController {
         return techSolutions.getClientes().consultarClientes();
     }
 
-
     public ServicioTecnologico crearServicio(FactoryServicio fabrica, String codigo,
                                              String nombre, String descripcion) {
         ServicioTecnologico servicio = fabrica.crearServicio(codigo, nombre, descripcion);
@@ -32,8 +32,6 @@ public class TechSolutionsController {
     public ArrayList<ServicioTecnologico> consultarServicios() {
         return techSolutions.getCatalogo().consultarServicios();
     }
-
-
 
     public ElementoServicio personalizarServicio(ServicioTecnologico base,
                                                  boolean prioritaria,
@@ -54,7 +52,34 @@ public class TechSolutionsController {
         return techSolutions.getCatalogo().consultarPersonalizados();
     }
 
-    // TechSolutionsController
+    public PaqueteTecnologico crearPaquete(String codigo, String nombre) {
+        if (codigo == null || codigo.isBlank()) {
+            throw new IllegalArgumentException("El código del paquete es obligatorio");
+        }
+        if (nombre == null || nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre del paquete es obligatorio");
+        }
+        for (PaqueteTecnologico p : paquetes) {
+            if (p.getCodigo().equalsIgnoreCase(codigo.trim())) {
+                throw new IllegalArgumentException("Ya existe un paquete con ese código");
+            }
+        }
+        PaqueteTecnologico paquete = new PaqueteTecnologico(codigo.trim(), nombre.trim());
+        paquetes.add(paquete);
+        return paquete;
+    }
+
+    public void agregarElementoAPaquete(PaqueteTecnologico paquete, ElementoServicio elemento) {
+        if (!paquete.agregar(elemento)) {
+            throw new IllegalArgumentException(
+                    "No se pudo agregar: el elemento es nulo o el paquete quedaría incluido dentro de sí mismo");
+        }
+    }
+
+    public ArrayList<PaqueteTecnologico> consultarPaquetes() {
+        return new ArrayList<>(paquetes);
+    }
+
     public SolicitudServicio registrarSolicitud(SolicitudServicio.Builder builder) {
         return techSolutions.getSolicitudes().registrar(builder);
     }
@@ -66,7 +91,18 @@ public class TechSolutionsController {
     public ArrayList<ElementoServicio> consultarElementosContratables() {
         ArrayList<ElementoServicio> lista = new ArrayList<>(consultarServicios());
         lista.addAll(consultarServiciosPersonalizados());
+        lista.addAll(paquetes);
         return lista;
     }
 
+    public Tecnico consultarTecnico(String especialidad) {
+        if (especialidad == null || especialidad.isBlank()) {
+            throw new IllegalArgumentException("La especialidad es obligatoria");
+        }
+        try {
+            return proveedorTecnico.consultarTecnico(especialidad);
+        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+            throw new IllegalStateException("LegacySupport devolvió una respuesta inválida");
+        }
+    }
 }

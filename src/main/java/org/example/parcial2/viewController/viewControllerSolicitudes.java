@@ -80,7 +80,6 @@ public class viewControllerSolicitudes implements IAppControlable {
         actualizarTablaSolicitudes();
     }
 
-    // ---------- Eventos ----------
 
     @FXML
     private void onAgregarElementoClick() {
@@ -138,10 +137,9 @@ public class viewControllerSolicitudes implements IAppControlable {
 
     @FXML
     private void onVolverClick() {
-        SceneManager.cambiarEscena("view/inicio.fxml", app);   // nombre real de tu FXML de Inicio
+        SceneManager.cambiarEscena("view/Inicio.fxml", app);   // nombre real de tu FXML de Inicio
     }
 
-    // ---------- Auxiliares ----------
 
     private void actualizarTablaSolicitudes() {
         tblSolicitudes.setItems(FXCollections.observableArrayList(controller.consultarSolicitudes()));

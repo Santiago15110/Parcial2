@@ -6,7 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="panelTecnicos" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.controller.TecnicosController">
+<AnchorPane fx:id="panelTecnicos" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.viewController.viewControllerTecnicos">
    <children>
       <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: #1E3A5F;">
          <children>

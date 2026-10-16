@@ -126,14 +126,12 @@ public class viewControllerServicios implements IAppControlable {
                 + " — costo final " + moneda(personalizado.calcularCosto()), false);
     }
 
-    // ---------- Volver ----------
 
     @FXML
     private void onVolverClick() {
-        SceneManager.cambiarEscena("view/inicio.fxml", app);   // nombre real de tu FXML de Inicio
+        SceneManager.cambiarEscena("view/Inicio.fxml", app);   // nombre real de tu FXML de Inicio
     }
 
-    // ---------- Auxiliares ----------
 
     private ElementoServicio armarPersonalizado(ServicioTecnologico base) {
         return controller.personalizarServicio(base,
