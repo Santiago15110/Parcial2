@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="panelInicio" alignment="CENTER" prefHeight="580.0" prefWidth="1000.0" spacing="10.0" styleClass="portada" stylesheets="@../../../../../../../../../../../Downloads/estilos%20(1).css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.controller.InicioController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label fx:id="lblTech" styleClass="marca-tech" text="Tech" />
+            <Label fx:id="lblSolutions" styleClass="marca-solutions" text="Solutions" />
+         </children>
+      </HBox>
+      <Label fx:id="lblSubtitulo" styleClass="subtitulo" text="Servicios tecnológicos para pequeñas y medianas empresas" />
+      <Label fx:id="lblPregunta" styleClass="pregunta" text="¿Qué quieres hacer hoy?">
+         <VBox.margin>
+            <Insets top="18.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" spacing="16.0">
+         <children>
+            <Button fx:id="btnServicios" contentDisplay="GRAPHIC_ONLY" onAction="#onServiciosClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
+               <graphic>
+                  <VBox fx:id="btnServicios" alignment="CENTER" spacing="4.0">
+                     <children>
+                        <Label styleClass="boton-titulo" text="Servicios" />
+                        <Label styleClass="boton-subtitulo" text="Catálogo y personalización" />
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="btnPaquetes" contentDisplay="GRAPHIC_ONLY" onAction="#onPaquetesClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
+               <graphic>
+                  <VBox fx:id="btnPaquetes" alignment="CENTER" spacing="4.0">
+                     <children>
+                        <Label styleClass="boton-titulo" text="Paquetes" />
+                        <Label styleClass="boton-subtitulo" text="Agrupar servicios" />
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSolicitudes" contentDisplay="GRAPHIC_ONLY" onAction="#onSolicitudesClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
+               <graphic>
+                  <VBox fx:id="btnSolicitudes" alignment="CENTER" spacing="4.0">
+                     <children>
+                        <Label styleClass="boton-titulo" text="Solicitudes" />
+                        <Label styleClass="boton-subtitulo" text="Registrar y consultar" />
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="btnTecnicos" contentDisplay="GRAPHIC_ONLY" onAction="#onTecnicosClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
+               <graphic>
+                  <VBox fx:id="btnTecnicos" alignment="CENTER" spacing="4.0">
+                     <children>
+                        <Label styleClass="boton-titulo" text="Técnicos y costo" />
+                        <Label styleClass="boton-subtitulo" text="Disponibilidad y confirmación" />
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
