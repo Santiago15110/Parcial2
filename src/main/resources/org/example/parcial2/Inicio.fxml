@@ -1,68 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="panelInicio" alignment="CENTER" prefHeight="580.0" prefWidth="1000.0" spacing="10.0" styleClass="portada" stylesheets="@../../../../../../../../../../../Downloads/estilos%20(1).css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.controller.InicioController">
+<AnchorPane fx:id="panelInicio" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #F4F8FD, #E6EEF8);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.controller.InicioController">
    <children>
-      <HBox alignment="CENTER">
+      <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: #1E3A5F;">
          <children>
-            <Label fx:id="lblTech" styleClass="marca-tech" text="Tech" />
-            <Label fx:id="lblSolutions" styleClass="marca-solutions" text="Solutions" />
+            <Label layoutX="16.0" layoutY="10.0" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="TechSolutions" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="0.0" layoutY="115.0" prefHeight="80.0" prefWidth="1000.0">
+         <children>
+            <Label fx:id="lblTech" style="-fx-text-fill: #1E3A5F; -fx-font-size: 64px; -fx-font-weight: bold;" text="Tech" />
+            <Label fx:id="lblSolutions" style="-fx-text-fill: #1E6FD9; -fx-font-size: 64px; -fx-font-weight: bold;" text="Solutions" />
          </children>
       </HBox>
-      <Label fx:id="lblSubtitulo" styleClass="subtitulo" text="Servicios tecnológicos para pequeñas y medianas empresas" />
-      <Label fx:id="lblPregunta" styleClass="pregunta" text="¿Qué quieres hacer hoy?">
-         <VBox.margin>
-            <Insets top="18.0" />
-         </VBox.margin>
-      </Label>
-      <HBox alignment="CENTER" spacing="16.0">
+      <Label fx:id="lblSubtitulo" alignment="CENTER" layoutX="0.0" layoutY="200.0" prefWidth="1000.0" style="-fx-text-fill: #5B6775; -fx-font-size: 14px;" text="Servicios tecnológicos para pequeñas y medianas empresas" />
+      <Label fx:id="lblPregunta" alignment="CENTER" layoutX="0.0" layoutY="262.0" prefWidth="1000.0" style="-fx-text-fill: #44505E; -fx-font-size: 22px;" text="¿Qué quieres hacer hoy?" />
+      <HBox alignment="CENTER" layoutX="0.0" layoutY="320.0" prefHeight="90.0" prefWidth="1000.0" spacing="16.0">
          <children>
-            <Button fx:id="btnServicio" contentDisplay="GRAPHIC_ONLY" onAction="#onServiciosClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
-               <graphic>
-                  <VBox fx:id="btnServicios" alignment="CENTER" spacing="4.0">
-                     <children>
-                        <Label styleClass="boton-titulo" text="Servicios" />
-                        <Label styleClass="boton-subtitulo" text="Catálogo y personalización" />
-                     </children>
-                  </VBox>
-               </graphic>
-            </Button>
-            <Button fx:id="btnPaquete" contentDisplay="GRAPHIC_ONLY" onAction="#onPaquetesClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
-               <graphic>
-                  <VBox fx:id="btnPaquetes" alignment="CENTER" spacing="4.0">
-                     <children>
-                        <Label styleClass="boton-titulo" text="Paquetes" />
-                        <Label styleClass="boton-subtitulo" text="Agrupar servicios" />
-                     </children>
-                  </VBox>
-               </graphic>
-            </Button>
-            <Button fx:id="btnSolicitude" contentDisplay="GRAPHIC_ONLY" onAction="#onSolicitudesClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
-               <graphic>
-                  <VBox fx:id="btnSolicitudes" alignment="CENTER" spacing="4.0">
-                     <children>
-                        <Label styleClass="boton-titulo" text="Solicitudes" />
-                        <Label styleClass="boton-subtitulo" text="Registrar y consultar" />
-                     </children>
-                  </VBox>
-               </graphic>
-            </Button>
-            <Button fx:id="btnTecnico" contentDisplay="GRAPHIC_ONLY" onAction="#onTecnicosClick" prefHeight="90.0" prefWidth="200.0" styleClass="boton-portada">
-               <graphic>
-                  <VBox fx:id="btnTecnicos" alignment="CENTER" spacing="4.0">
-                     <children>
-                        <Label styleClass="boton-titulo" text="Técnicos y costo" />
-                        <Label styleClass="boton-subtitulo" text="Disponibilidad y confirmación" />
-                     </children>
-                  </VBox>
-               </graphic>
-            </Button>
+            <Button fx:id="btnServicios" mnemonicParsing="false" onAction="#onServiciosClick" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: #1E3A5F; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-text-alignment: center;" text="Servicios&#10;Catálogo y personalización" textAlignment="CENTER" />
+            <Button fx:id="btnPaquetes" mnemonicParsing="false" onAction="#onPaquetesClick" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: #1E3A5F; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-text-alignment: center;" text="Paquetes&#10;Agrupar servicios" textAlignment="CENTER" />
+            <Button fx:id="btnSolicitudes" mnemonicParsing="false" onAction="#onSolicitudesClick" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: #1E3A5F; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-text-alignment: center;" text="Solicitudes&#10;Registrar y consultar" textAlignment="CENTER" />
+            <Button fx:id="btnTecnicos" mnemonicParsing="false" onAction="#onTecnicosClick" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: #1E3A5F; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-text-alignment: center;" text="Técnicos y costo&#10;Disponibilidad y confirmación" textAlignment="CENTER" />
          </children>
       </HBox>
    </children>
-</VBox>
+</AnchorPane>
