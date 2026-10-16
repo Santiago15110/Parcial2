@@ -27,6 +27,7 @@ public class SceneManager {
             stage.setScene(new Scene(raiz));
             stage.show();
         } catch (IOException e) {
+            e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "No se pudo cargar la pantalla: " + rutaFXML).show();
         }
     }

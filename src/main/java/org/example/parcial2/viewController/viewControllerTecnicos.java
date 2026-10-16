@@ -107,7 +107,7 @@ public class viewControllerTecnicos implements IAppControlable {
 
     @FXML
     private void onVolverClick() {
-        SceneManager.cambiarEscena("view/Inicio.fxml", app);
+        SceneManager.cambiarEscena("Inicio.fxml", app);
     }
 
     private void actualizarSolicitudes() {

@@ -129,7 +129,7 @@ public class viewControllerServicios implements IAppControlable {
 
     @FXML
     private void onVolverClick() {
-        SceneManager.cambiarEscena("view/Inicio.fxml", app);   // nombre real de tu FXML de Inicio
+        SceneManager.cambiarEscena("Inicio.fxml", app);   // nombre real de tu FXML de Inicio
     }
 
 

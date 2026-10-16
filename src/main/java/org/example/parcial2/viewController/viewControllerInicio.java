@@ -16,26 +16,26 @@ public class viewControllerInicio implements IAppControlable {
 
     @FXML
     private void onServiciosClick() {
-        SceneManager.cambiarEscena("view/servicios.fxml", app);
+        SceneManager.cambiarEscena("Servicios.fxml", app);
     }
 
     @FXML
     private void onClientesClick() {
-        SceneManager.cambiarEscena("view/clientes.fxml", app);
+        SceneManager.cambiarEscena("Clientes.fxml", app);
     }
 
     @FXML
     private void onPaquetesClick() {
-        SceneManager.cambiarEscena("view/paquetes.fxml", app);
+        SceneManager.cambiarEscena("Paquetes.fxml", app);
     }
 
     @FXML
     private void onSolicitudesClick() {
-        SceneManager.cambiarEscena("view/solicitudes.fxml", app);
+        SceneManager.cambiarEscena("Solicitudes.fxml", app);
     }
 
     @FXML
     private void onTecnicosClick() {
-        SceneManager.cambiarEscena("view/tecnicos.fxml", app);
+        SceneManager.cambiarEscena("Tecnicos.fxml", app);
     }
 }
