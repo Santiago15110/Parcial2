@@ -1,5 +1,7 @@
 package org.example.parcial2.model;
 
+import javafx.collections.ObservableList;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -169,6 +171,17 @@ public class  SolicitudServicio {
                 throw new IllegalStateException("Debe incluir al menos un servicio o paquete");
             }
             return new SolicitudServicio(this);
+        }
+
+
+        /**
+         * Método para asignar la lista completa de elementos contratados
+         * @param elementos elementos contratados
+         * @return el mismo builder
+         */
+        public Builder conElementos(List<ElementoServicio> elementos) {
+            this.elementos = new ArrayList<>(elementos);
+            return this;
         }
     }
 }

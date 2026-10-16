@@ -11,7 +11,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="panelSolicitudes" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.controller.SolicitudesController">
+<AnchorPane fx:id="panelSolicitudes" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parcial2.viewController.viewControllerSolicitudes">
    <children>
       <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: #1E3A5F;">
          <children>
@@ -37,7 +37,6 @@
          <DatePicker fx:id="dpFecha" layoutX="12.0" layoutY="170.0" prefWidth="200.0" />
          <Label layoutX="12.0" layoutY="208.0" style="-fx-text-fill: #5B6775;" text="Observaciones (opcional)" />
          <TextArea fx:id="txtObservaciones" layoutX="12.0" layoutY="228.0" prefHeight="80.0" prefWidth="416.0" wrapText="true" />
-         <CheckBox fx:id="chkPresencial" layoutX="12.0" layoutY="325.0" mnemonicParsing="false" onAction="#onPresencialClick" text="Requiere atención presencial" />
          <Label layoutX="12.0" layoutY="352.0" style="-fx-text-fill: #5B6775;" text="Especialidad del técnico" />
          <ComboBox fx:id="cmbEspecialidad" layoutX="12.0" layoutY="372.0" prefWidth="250.0" />
          <Button fx:id="btnRegistrar" layoutX="12.0" layoutY="410.0" mnemonicParsing="false" onAction="#onRegistrarClick" style="-fx-background-color: #0F766E; -fx-text-fill: white; -fx-background-radius: 4;" text="Registrar solicitud" />

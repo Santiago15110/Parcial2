@@ -54,4 +54,19 @@ public class TechSolutionsController {
         return techSolutions.getCatalogo().consultarPersonalizados();
     }
 
+    // TechSolutionsController
+    public SolicitudServicio registrarSolicitud(SolicitudServicio.Builder builder) {
+        return techSolutions.getSolicitudes().registrar(builder);
+    }
+
+    public ArrayList<SolicitudServicio> consultarSolicitudes() {
+        return techSolutions.getSolicitudes().consultarSolicitudes();
+    }
+
+    public ArrayList<ElementoServicio> consultarElementosContratables() {
+        ArrayList<ElementoServicio> lista = new ArrayList<>(consultarServicios());
+        lista.addAll(consultarServiciosPersonalizados());
+        return lista;
+    }
+
 }
