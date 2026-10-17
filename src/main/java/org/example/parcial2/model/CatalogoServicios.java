@@ -12,11 +12,19 @@ public class CatalogoServicios {
     }
 
 
+    /**
+     * método para consultar un servicio tecnologico
+     * @return
+     */
     public ArrayList<ServicioTecnologico>consultarServicios(){
         return new ArrayList<>(servicios);
     }
 
 
+    /**
+     * metodo para agregar un servicio personalizado
+     * @param personalizado
+     */
     public void agregarPersonalizado(ElementoServicio personalizado) {
         serviciosPersonalizados.add(personalizado);
     }

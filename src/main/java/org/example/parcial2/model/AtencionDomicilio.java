@@ -2,9 +2,15 @@ package org.example.parcial2.model;
 
 public class AtencionDomicilio extends DecoradorServicio{
 
+    /**
+     * Metodo constructor de atencion domicilio
+     * @param elementoServicio
+     */
     public AtencionDomicilio(ElementoServicio elementoServicio){
         super(elementoServicio);
     }
+
+
 
     @Override
     public String getDescripcion(){

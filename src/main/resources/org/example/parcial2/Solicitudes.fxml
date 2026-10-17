@@ -37,8 +37,6 @@
          <DatePicker fx:id="dpFecha" layoutX="12.0" layoutY="170.0" prefWidth="200.0" />
          <Label layoutX="12.0" layoutY="208.0" style="-fx-text-fill: #5B6775;" text="Observaciones (opcional)" />
          <TextArea fx:id="txtObservaciones" layoutX="12.0" layoutY="228.0" prefHeight="80.0" prefWidth="416.0" wrapText="true" />
-         <Label layoutX="12.0" layoutY="352.0" style="-fx-text-fill: #5B6775;" text="Especialidad del técnico" />
-         <ComboBox fx:id="cmbEspecialidad" layoutX="12.0" layoutY="372.0" prefWidth="250.0" />
          <Button fx:id="btnRegistrar" layoutX="12.0" layoutY="410.0" mnemonicParsing="false" onAction="#onRegistrarClick" style="-fx-background-color: #0F766E; -fx-text-fill: white; -fx-background-radius: 4;" text="Registrar solicitud" />
          </children>
       </AnchorPane>
