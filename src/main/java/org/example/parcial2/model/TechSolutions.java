@@ -11,6 +11,10 @@ public class TechSolutions {
         cargarDatosIniciales();
     }
 
+
+    /**
+     * Metodo para precargar datos
+     */
     public void cargarDatosIniciales(){
 
         clientes.registrarCliente("1031", "David", "David@hotmail.com");
